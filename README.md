@@ -11,9 +11,11 @@ python3 -m http.server 4173
 - 入口页: `http://localhost:4173/`
 - 运维页: `http://localhost:4173/operations/`
 - 研究页: `http://localhost:4173/research/`
+- 传播页: `http://localhost:4173/communication/`
 
 ## 分支约定
 
 - `运维`: 运维指标页面独立分支
 - `研究`: 研究页面独立分支
+- `communication`: 传播页面独立分支
 - `预览`: 多页面聚合预览分支
