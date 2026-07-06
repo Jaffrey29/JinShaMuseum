@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>金沙遗址博物馆研究专题平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="金沙遗址博物馆研究专题 32 比 9 大屏">
+      <div class="ambient"></div>
+      <header class="topbar">
+        <div class="weather-strip">
+          <div class="weather-item">
+            <span class="weather-icon">研</span>
+            <strong>2026</strong>
+            <span>年度</span>
+          </div>
+          <div class="weather-item">
+            <span class="weather-icon">藏</span>
+            <strong>18K</strong>
+            <span>资源日更</span>
+          </div>
+        </div>
+        <h1>金沙遗址博物馆研究专题平台</h1>
+        <div class="clock-strip">
+          <span id="dateText">2026年7月6日</span>
+          <strong id="timeText">14:22:00</strong>
+        </div>
+      </header>
+
+      <section class="center-scene">
+        <img src="../assets/ruins-panorama.png" alt="金沙遗址馆数字孪生研究区" />
+        <div class="scene-vignette"></div>
+        <div class="research-map">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="research-node node-a">
+            <span>考古发掘</span>
+            <strong>12 项课题</strong>
+          </div>
+          <div class="research-node node-b">
+            <span>文物保护</span>
+            <strong>8 个方向</strong>
+          </div>
+          <div class="research-node node-c">
+            <span>公众考古</span>
+            <strong>5 个项目</strong>
+          </div>
+        </div>
+        <div class="center-caption">
+          <span>数字孪生研究区</span>
+          <strong>遗址空间 · 学术课题 · 资源馆藏 · 合作网络</strong>
+        </div>
+      </section>
+
+      <aside class="left-stack">
+        <article class="panel outcomes-panel">
+          <div class="panel-title"><span>学术成果</span></div>
+          <div class="hero-metrics">
+            <div><span>成果总量</span><strong>328</strong><em>出版物 76 / 论文 252</em></div>
+            <div><span>本月新增</span><strong>18</strong><em>论文 14 / 出版物 4</em></div>
+            <div><span>在研课题</span><strong>27</strong><em>国家级 5 / 省市级 12</em></div>
+          </div>
+          <div class="outcome-body">
+            <div id="outcomePie" class="chart"></div>
+            <div class="compact-list" id="publicationList"></div>
+          </div>
+          <div class="project-strip" id="projectStrip"></div>
+        </article>
+
+        <article class="panel talent-panel">
+          <div class="panel-title"><span>人才总览</span></div>
+          <div class="talent-top">
+            <div class="staff-card">
+              <span>职工总数</span>
+              <strong>86</strong>
+              <em>季度 / 年度更新</em>
+            </div>
+            <div id="titlePie" class="chart"></div>
+            <div class="training-card">
+              <span>年度培训会议</span>
+              <strong>42</strong>
+              <em>培训 26 / 会议 16</em>
+            </div>
+          </div>
+          <div class="talent-bars">
+            <div class="bar-group">
+              <div class="group-title">学历分布</div>
+              <div class="mini-bars" id="educationBars"></div>
+            </div>
+            <div class="bar-group">
+              <div class="group-title">年龄梯队</div>
+              <div class="mini-bars" id="ageBars"></div>
+            </div>
+          </div>
+        </article>
+      </aside>
+
+      <aside class="right-stack">
+        <article class="panel activity-panel">
+          <div class="panel-title"><span>学术活动</span></div>
+          <div class="activity-metrics">
+            <div><span>主办会议</span><strong>8</strong></div>
+            <div><span>承办会议</span><strong>12</strong></div>
+            <div><span>参与会议</span><strong>36</strong></div>
+            <div><span>主题讲座</span><strong>24</strong></div>
+          </div>
+          <div class="split-lists">
+            <div>
+              <div class="sub-title">近期会议</div>
+              <div class="compact-list" id="conferenceList"></div>
+            </div>
+            <div>
+              <div class="sub-title">获奖情况</div>
+              <div class="award-list" id="awardList"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel resource-panel">
+          <div class="panel-title"><span>学术资源</span></div>
+          <div class="resource-head">
+            <div class="staff-card">
+              <span>图书总数</span>
+              <strong>18,620</strong>
+              <em>日度更新</em>
+            </div>
+            <div class="resource-note">
+              <span>分类数量及占比</span>
+              <strong>6 类资源</strong>
+            </div>
+          </div>
+          <div class="resource-bars" id="resourceBars"></div>
+        </article>
+
+        <article class="panel cooperation-panel">
+          <div class="panel-title"><span>学术合作</span></div>
+          <div class="cooperation-head">
+            <div>
+              <span>合作机构总数</span>
+              <strong>38</strong>
+              <em>季度 / 年度更新</em>
+            </div>
+            <div>
+              <span>本年新增</span>
+              <strong>6</strong>
+              <em>高校 3 / 研究院 2 / 海外 1</em>
+            </div>
+          </div>
+          <div class="partner-list" id="partnerList"></div>
+        </article>
+      </aside>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
