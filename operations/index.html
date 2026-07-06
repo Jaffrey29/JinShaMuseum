@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>金沙遗址博物馆综合运营平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="金沙遗址博物馆综合运营平台 32 比 9 大屏">
+      <div class="ambient"></div>
+      <header class="topbar">
+        <div class="weather-strip">
+          <div class="weather-item">
+            <span class="weather-icon">☀</span>
+            <strong>25°C</strong>
+            <span>温度</span>
+          </div>
+          <div class="weather-item">
+            <span class="weather-icon">◎</span>
+            <strong>45%</strong>
+            <span>湿度</span>
+          </div>
+        </div>
+        <h1>金沙遗址博物馆综合运营平台</h1>
+        <div class="clock-strip">
+          <span id="dateText">2026年7月6日</span>
+          <strong id="timeText">14:22:00</strong>
+        </div>
+      </header>
+
+      <section class="center-scene">
+        <img src="../assets/ruins-panorama.png" alt="金沙遗址馆数字孪生主视觉" />
+        <div class="scene-vignette"></div>
+        <div class="scene-chip chip-a">
+          <span>遗迹馆</span>
+          <strong>在线率 98.6%</strong>
+        </div>
+        <div class="scene-chip chip-b">
+          <span>展陈区域</span>
+          <strong>今日客流 8,426</strong>
+        </div>
+        <div class="scene-chip chip-c">
+          <span>重点安防</span>
+          <strong>3 条待处理</strong>
+        </div>
+      </section>
+
+      <aside class="left-stack">
+        <article class="panel asset-panel">
+          <div class="panel-title"><span>资产总览</span></div>
+          <div class="metric-row">
+            <div class="metric-card">
+              <span>设备总数</span>
+              <strong>2,846</strong>
+            </div>
+            <div class="metric-card">
+              <span>在线率</span>
+              <strong>98.6%</strong>
+            </div>
+            <div class="metric-card danger">
+              <span>报废设备</span>
+              <strong>17</strong>
+            </div>
+            <div class="metric-card warn">
+              <span>维修设备</span>
+              <strong>42</strong>
+            </div>
+          </div>
+          <div class="chart-pair">
+            <div id="assetPie" class="chart"></div>
+            <div id="assetBar" class="chart"></div>
+          </div>
+        </article>
+
+        <article class="panel alarm-summary-panel">
+          <div class="panel-title"><span>今日告警统计</span></div>
+          <div class="alarm-metrics">
+            <div>
+              <span>告警总数</span>
+              <strong>126</strong>
+              <em>环比 +8%</em>
+            </div>
+            <div>
+              <span>已处理</span>
+              <strong>109</strong>
+              <em>环比 +12%</em>
+            </div>
+            <div>
+              <span>未处理</span>
+              <strong>17</strong>
+              <em>环比 -6%</em>
+            </div>
+            <div>
+              <span>平均时长</span>
+              <strong>18m</strong>
+              <em>环比 -4%</em>
+            </div>
+          </div>
+          <div id="alarmTrend" class="chart slim-chart"></div>
+        </article>
+
+        <article class="panel alarm-list-panel">
+          <div class="panel-title"><span>告警列表</span></div>
+          <div class="switch-row">
+            <button class="active">今日</button>
+            <button>本周</button>
+            <button>本月</button>
+          </div>
+          <div class="status-strip">
+            <span>总数 <b>126</b></span>
+            <span>待处理 <b>9</b></span>
+            <span>处理中 <b>8</b></span>
+            <span>已处理 <b>109</b></span>
+          </div>
+          <div class="tabs">
+            <button class="active">全部</button><button>空调</button><button>消防</button><button>配电</button><button>安防</button>
+          </div>
+          <div class="table alarm-table" id="alarmTable"></div>
+        </article>
+
+        <article class="panel security-panel">
+          <div class="panel-title"><span>安防设备运行统计</span></div>
+          <div class="security-grid">
+            <div class="security-gauge">
+              <div id="securityStatusPie" class="chart"></div>
+              <div class="security-total">
+                <span>安防设备</span>
+                <strong>661</strong>
+              </div>
+            </div>
+            <div class="security-cards">
+              <div><span>视频监控</span><strong>416</strong><em>在线 403 / 告警 4</em></div>
+              <div><span>入侵防盗</span><strong>28</strong><em>在线 27 / 告警 1</em></div>
+              <div><span>消防安防</span><strong>32</strong><em>在线 31 / 告警 1</em></div>
+              <div><span>门禁</span><strong>128</strong><em>在线 124 / 告警 2</em></div>
+              <div><span>应急防护</span><strong>33</strong><em>在线 32 / 告警 1</em></div>
+              <div><span>文物专用</span><strong>24</strong><em>在线 22 / 告警 0</em></div>
+            </div>
+          </div>
+        </article>
+      </aside>
+
+      <aside class="right-stack">
+        <article class="panel energy-overview-panel">
+          <div class="panel-title"><span>能耗概览</span></div>
+          <div class="energy-cards">
+            <div>
+              <span>电耗总量</span>
+              <strong>18.42 tce</strong>
+              <em>同比 -3.8%</em>
+            </div>
+            <div>
+              <span>用水量</span>
+              <strong>1,286 m³</strong>
+              <em>环比 +2.1%</em>
+            </div>
+          </div>
+          <div id="energySpaceBar" class="chart slim-chart"></div>
+        </article>
+
+        <article class="panel energy-detail-panel">
+          <div class="panel-title"><span>能耗分项统计</span></div>
+          <div class="triple-charts">
+            <div id="energyFunctionPie" class="chart"></div>
+            <div id="waterBar" class="chart"></div>
+            <div id="energyCompareLine" class="chart"></div>
+          </div>
+        </article>
+
+        <article class="panel access-panel">
+          <div class="panel-title"><span>门禁设备运行状态</span></div>
+          <div class="access-layout">
+            <div id="accessPie" class="chart"></div>
+            <div class="access-numbers">
+              <span>门禁总数</span><strong>128</strong>
+              <span>在线</span><strong>124</strong>
+              <span>离线</span><strong>4</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel maintenance-panel">
+          <div class="panel-title"><span>设备运维统计</span></div>
+          <div class="maintenance-top">
+            <div id="maintenancePie" class="chart"></div>
+            <div class="expire-card">
+              <span>近 1 月到期设备</span>
+              <strong>36</strong>
+              <em>年检 14 / 维保 22</em>
+            </div>
+          </div>
+          <div class="table maintenance-table" id="maintenanceTable"></div>
+        </article>
+
+        <article class="panel security-alarm-panel">
+          <div class="panel-title"><span>安防告警统计</span></div>
+          <div class="switch-row compact">
+            <button class="active">近7日</button>
+            <button>近30日</button>
+            <button>近半年</button>
+          </div>
+          <div class="security-alarm-layout">
+            <div id="securityAlarmPie" class="chart"></div>
+            <div id="timelyRateBar" class="chart"></div>
+          </div>
+        </article>
+      </aside>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
